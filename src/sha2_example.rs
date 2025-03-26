@@ -42,7 +42,7 @@ impl Block {
         hasher.finalize().to_vec() 
     }
 }
-#[derive(Debug)] // to make you display structs
+#[derive(Debug)] 
 pub struct Blockchain{
     chain : Vec<Block>,
 }
