@@ -29,7 +29,6 @@ fn main() {
 
     let message_data = b"Hello, world!";
 
-    // Hash the message using SHA-256
     let mut hasher = Sha256::new();
     hasher.update(message_data);
     let message_hash = hasher.finalize();
@@ -48,7 +47,7 @@ fn main() {
     blockchain.add_block("block 1 data".to_string());
     blockchain.add_block("block 2 data".to_string());
 
-    println!("blockchain : {:#?} ",blockchain) ;//{:#?} for a pretty display 
+    println!("blockchain : {:#?} ",blockchain) ;
 
     let transaction = create_transaction() ;
     println!("{:#?}",transaction) ; 
@@ -57,5 +56,5 @@ fn main() {
     let key = b"secret_key";
     let msg =b"a message";
     let hmac = generate_hmac(key, msg);
-    println!("hmac = {:x?}",hmac); // print in hexadecimal 
+    println!("hmac = {:x?}",hmac); 
 }
